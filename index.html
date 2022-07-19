@@ -80,7 +80,11 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <div class="d-grid gap-2 col-6 ">
-                    <button type="button" class="btn btn-warning btn-sm">Reserve Table</button>
+                    <a class="btn btn-warning btn-sm" href="./form.html" role="button">Reserve Table</a>
+                    
+
+
+                      
                     </div>
                 </div>
                 
@@ -177,22 +181,23 @@
                 
             </div>
         </div>
-    </div>
+    
     <div class="container">
         <div class="row ">
             <div class="col">
 
             </div>
             <div class="col-8 justify-content-center">
-    <div class="card " style="max-width: 45rem;">
-        <div class="card-header text-white">Reserve a Table</div>
-        <div class="card-body mr-auto">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3">
+        
+             <div class="card " style="max-width: 45rem;">
+                <div class="card-header text-white">Reserve a Table</div>
+                <div class="card-body mr-auto">
+                  <div class="container">
+                     <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-2">
                         Number of Guests
                     </div>
-                    <div class="col-9">
+                    <div class="col-sm-9">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">1</label>
@@ -236,23 +241,25 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
+                    <div class=" col-sm-3 col-md-3 col-lg-2">
                         Date and Time
                     </div>
-                    <div class="col-9">
+                    <div class="col-sm-9">
+                        <div class="container overflow-hidden text-center">
+                            <div class="row gx-5">
+                              <div class="col-sm-9 col-md-6 ">
+                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Date">
+                              </div>
+                              <div class="col-sm-9 col-md-6 ">
+                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Time">
+                                
+                              </div>
+                            </div>
+                          </div>
 
 
                         
-                            <div class="form-floating">
-                              <input type="text" class="form-control" id="floatingInputGrid" placeholder="Date">
-                              
                             
-                          
-                          
-                            
-                              <input type="text" class="form-control" id="floatingInputGrid" placeholder="Time">
-                              </div>
-                              
                               
 
                     </div>
@@ -283,9 +290,10 @@
     
   <br>
   
-  <div class="d-grid gap-6 col-6 mx-auto">
+  <div class="d-grid gap-6 col-sm-9 col-md-6 col-lg-8 mx-auto">
     <button class="btn btn-primary" type="button">Reserve</button>
     </div>
+    
     
   
     
@@ -308,7 +316,7 @@
         </div>
         </div>
         </div>
-
+        
 
 
 
