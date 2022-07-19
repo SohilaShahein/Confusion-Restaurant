@@ -14,6 +14,7 @@
     background-color: #D1C4E9;
     margin:0px auto;
     padding: 20px 0px 20px 0px;
+    
 }
 .jumbotron {
     padding:70px 30px 70px 30px;
@@ -35,4 +36,39 @@ body{
 .navbar-dark {
      background-color: #512DA8;
 }
-
+.card{
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+.card-header{
+    background-color: orange;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: inherit;
+}
+.d-inline-block{
+    margin-right: 25px;
+    font-size: 20px;
+    margin-bottom: 1px;
+    margin-top: .3px;
+   
+}
+.form-check-label{
+    font-size: 15px;
+    font-weight:bolder;
+}
+.form-control{
+    font-size: 18px;
+}
+.btn-primary{
+    font-weight: bold;
+    font-size: 18px;
+    font-style: inherit;
+    
+}
+.btn-warning{
+    width: 230px;
+    height: 45px;
+   
+    font-size: large;
+}
