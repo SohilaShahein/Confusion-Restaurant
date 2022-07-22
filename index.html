@@ -17,11 +17,19 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+   
+<script>
+    const myModal = document.getElementById('myModal')
+   const myInput = document.getElementById('myInput')
+
+   myModal.addEventListener('shown.bs.modal', () => {
+   myInput.focus()
+});
+</script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+</script>
 
 
 
@@ -32,6 +40,13 @@
 </head>
 
 <body>
+  
+
+
+
+
+
+
     <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -125,8 +140,143 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <div class="d-grid gap-2 col-6 ">
-                    <a class="btn btn-warning btn-sm" href="./form.html" role="button" data-toggle="tooltip" data-html="true"  title="Or Call us at  +852 12345678"
-                        data-placement="bottom">Reserve Table</a>
+                    
+                      <!-- Button trigger modal -->
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="btn">
+    Reverse a Table
+  </button>
+  
+  <!-- Modal -->
+  
+  <div class="modal fade" id="goalmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog" style="margin-left: 250px;">
+      <div class="modal-content" style="width: 800px;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel" style="color:black ;">Reserve a Table</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="color:black ;">
+            <div class="container one">
+                <div class="row">
+               <div class="col-sm-3 col-md-3 col-lg-2">
+                   Number of Guests
+               </div>
+               <div class="col-sm-9">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+                    <label class="form-check-label" for="inlineRadio3">3 </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">5</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">6</label>
+                  </div>
+                  </div>
+
+
+            </div>
+             </div>
+
+             <div class="container one">
+                <div class="row">
+                    <div class=" col-sm-3 col-md-3 col-lg-2">
+                        Section
+                        </div>
+                        <div class="col-sm-9 col-md-6 ">
+                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                <button type="button" class="btn btn-success active">non-smoking</button>
+                                <button type="button" class="btn btn-danger">smoking</button>
+                            </div>
+
+                        </div>
+                        </div>
+                        </div>
+             <div class="container one">
+                <div class="row">
+                    <div class=" col-sm-3 col-md-3 col-lg-2">
+                        Date and Time
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="container overflow-hidden text-center">
+                            <div class="row gx-5">
+                              <div class="col-sm-9 col-md-6 ">
+                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Date">
+                              </div>
+                              <div class="col-sm-9 col-md-6 ">
+                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Time">
+                                
+                              </div>
+                            </div>
+                          </div>
+
+
+                        
+                            
+                              
+
+                    </div>
+                </div>
+            </div>
+            <div class="container one">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+
+                    </div>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                       
+                        <div class="btn-group me-2" role="group" aria-label="First group">
+                    
+                        <button class="btn btn-secondary" type="button">Cancel</button>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="btn-group me-2" role="group" aria-label="Second group">
+                        
+                            <button class="btn btn-primary" type="button">Reserve</button>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+             </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    $('#btn').on('click',function(){
+        $('#goalmodal').modal('show');
+
+    });
+
+  </script>
+                        
                     
 
 
@@ -136,6 +286,7 @@
                 
                 
             </div>
+        </div>
         </div>
     </header>
 
@@ -213,143 +364,35 @@
 
 
 
-
-        
-    
-    <div class="container">
-        <div class="row ">
-            <div class="col">
-
-            </div>
-            <div class="col-8 justify-content-center">
-        
-             <div class="card one" style="max-width: 45rem;">
-                <div class="card-header text-white">Reserve a Table</div>
-                <div class="card-body mr-auto">
-                  <div class="container">
-                     <div class="row">
-                    <div class="col-sm-3 col-md-3 col-lg-2">
-                        Number of Guests
-                    </div>
-                    <div class="col-sm-9">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
-                            <label class="form-check-label" for="inlineRadio3">3 </label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">4</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">5</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                            <label class="form-check-label" for="inlineRadio3">6</label>
-                          </div>
-                        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class=" col-sm-3 col-md-3 col-lg-2">
-                        Date and Time
-                    </div>
-                    <div class="col-sm-9">
-                        <div class="container overflow-hidden text-center">
-                            <div class="row gx-5">
-                              <div class="col-sm-9 col-md-6 ">
-                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Date">
-                              </div>
-                              <div class="col-sm-9 col-md-6 ">
-                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Time">
-                                
-                              </div>
-                            </div>
-                          </div>
-
-
-                        
-                            
-                              
-
-                    </div>
-                </div>
-            </div>
-              
-              
-        
-
-    
-      
-      
-
-
-
-
-
-
-
-
-      
-  
-  
-
-  
-  
-  
-    
-  <br>
-  
-  <div class="d-grid gap-6 col-sm-9 col-md-6 col-lg-8 mx-auto">
-    <button class="btn btn-primary" type="button">Reserve</button>
-    </div>
-    
-    
-  
-    
-  
-  
-
-
-
-
-
             
+              
+              
+        
+
+    
+      
+      
 
 
-        </div>
-          
-        </div>
-        </div>
-        <div class="col">
 
+
+
+
+
+
+      
+  
+  
+
+  
+  
+  
+ 
+        
         </div>
         </div>
-        </div>
+        <!-- Button trigger modal -->
+
         
 
 
