@@ -71,3 +71,25 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+.btn-warning{
+    width: 230px;
+    height: 45px;
+   
+    font-size: large;
+}
+.one{
+    margin: 20px;
+}
+.modal{
+    .modal-header{
+        background-color: #512DA8;
+        color:floralwhite;
+        .close{
+            color: floralwhite;
+        }
+    }
+    .modal-body{
+        background-color:#D1C4E9;
+
+    }
+}
